@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&fa
+    mily=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: กําหนด config เพิ่มเติม (ใส่หลัง script) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#06B6D4' }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- ── Navigation ── -->
+    <nav class="sticky top-0 z-50  flex items-center justify-between px-8 py-4 bg-slate-900 shadow-lg">
+        <div class="text-cyan-400 font-bold text-xl tracking-wide">Myweb</div>
+        <ul class="flex gap-8 list-none">
+            <li>
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">About</a>
+
+            </li>
+
+            <li>
+                <a href="#course"
+                    class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">Course</a>
+            </li>
+
+            <li>
+                <a href="#skills"
+                    class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects"
+                    class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">Projects</a>
+            </li>
+
+            <li>
+                <a href="#myfavoritegame"
+                    class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">My Favorite Game</a>
+            </li>
+
+            <li>
+                <a href="#fovoritesong" class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">My
+                    Fovorite Song</a>
+            </li>
+
+            <li>
+                <a href="#contact"
+                    class="text-gray-300 hover:text-cyan-400 font-medium transition duration-200">Contact</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-- ── Hero ── -->
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed text-center"
+        style="background-image: url('image/amiya.png')">
+        <!-- Overlay: absolute ครอบทั้ง section -->
+        <div class="absolute inset-0 bg-slate-900/80"></div>
+        <!-- Content: z-10 เพื่อให้อยู่บน overlay -->
+        <div class="relative z-10 text-white max-w-2xl px-6">
+            <p class="text-cyan-400 uppercase tracking-widest mb-3 text-sm"> Hello! My name is </p>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Supakorn Yangsomboon</h1>
+            <p class="text-gray-300 text-lg mb-8">Computer Science Student | Web Developer</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#projects"
+                    class="bg-cyan-500 text-slate-900 px-8 py-3 rounded-lg font-bold transition-all duration-300 hover:bg-cyan-600 hover:-translate-y-1 hover:shadow-lg">View
+                    My Work</a>
+                <a href="#contact"
+                    class="border border-white text-white px-8 py-3 rounded-lgd transition-all duration-300 hover:bg-white hover:text-slate-900">Contact
+                    Me</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ── About Me ── -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">About Me</h2>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            <!-- Two column layout -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-slate-600 text-lg leading-relaxed mb-4">นิสิตชั่นปีที่ 3 สาขาวิทยาการคอมพิวเตอร์
+                    </h3>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-4">ฉันชอบที่จะออกแบบและฉันต้องการเป็น game
+                        Developer และตอนนี้ฉันกำลังเรียนเขียนเว็บอยู่</p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-4">รายวิชาโปรด: Web Application Development |
+                        ชอบสร้างสิ่งใหม่ๆ ด้วย Code </p>
+
+                </div>
+
+                <div class="text-center">
+                    <img src="image/profi.gif" alt="Profile"
+                        class="w-48 h-48 rounded-full mx-auto object-cover shadow-xl">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="course" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">รายวิชา</h2>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Course Card -->
+                <div class="bg-white border border-slate-200 border-t-4 border-t-cyan-500
+    rounded-xl p-6 shadow-sm
+    hover:-translate-y-2 hover:shadow-lg
+    transition-all duration-300">
+                    <p class="text-cyan-500 text-xs font-bold uppercase mb-1">0214321</p>
+                    <p class="font-semibold text-slate-800 leading-snug">
+                        Web Application Design & Development
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-200 border-t-4 border-t-cyan-500
+    rounded-xl p-6 shadow-sm
+    hover:-translate-y-2 hover:shadow-lg
+    transition-all duration-300">
+                    <p class="text-cyan-500 text-xs font-bold uppercase mb-1">0214235</p>
+                    <p class="font-semibold text-slate-800 leading-snug">
+                        เทคโนโลยีดิจิทัลสำหรับการประกอบการ
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-200 border-t-4 border-t-cyan-500
+    rounded-xl p-6 shadow-sm
+    hover:-translate-y-2 hover:shadow-lg
+    transition-all duration-300">
+                    <p class="text-cyan-500 text-xs font-bold uppercase mb-1">0214311</p>
+                    <p class="font-semibold text-slate-800 leading-snug">
+                        ชุดวิชาการตรวจสอบและการประกันคุณภาพซอฟต์แวร์
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-200 border-t-4 border-t-cyan-500
+    rounded-xl p-6 shadow-sm
+    hover:-translate-y-2 hover:shadow-lg
+    transition-all duration-300">
+                    <p class="text-cyan-500 text-xs font-bold uppercase mb-1">0214372</p>
+                    <p class="font-semibold text-slate-800 leading-snug">
+                        การออกแบบสถาปัตยกรรมของอินเทอร์เน็ตของสรรพสิ่ง
+                    </p>
+                </div>
+
+                <div class="bg-white border border-slate-200 border-t-4 border-t-cyan-500
+    rounded-xl p-6 shadow-sm
+    hover:-translate-y-2 hover:shadow-lg
+    transition-all duration-300">
+                    <p class="text-cyan-500 text-xs font-bold uppercase mb-1">0214332</p>
+                    <p class="font-semibold text-slate-800 leading-snug">
+                        การสำรวจความคิดเห็นและการประมวลผล
+                    </p>
+                </div>
+
+                <!-- เพิ่ม card อื่นๆ ในแบบเดียวกัน -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">Skills</h2>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            <!-- Badge group -->
+            <div class="flex flex-wrap gap-3 justify-center">
+                <!-- HTML5 badge -->
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white hover:border-cyan-500
+ transition-all duration-300">
+                    HTML
+                </span>
+                <!-- CSS3 badge -->
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white hover:border-cyan-500
+ transition-all duration-300">
+                    Tailwind CSS
+                </span>
+                <!-- JavaScript badge -->
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    JavaScript
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    React
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Node.js
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Next.js
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    PostgreSQL
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Git
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    C#
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Clip Studio Paint
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Character Design
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Unity
+                </span>
+
+                <span class="bg-cyan-100 text-cyan-700 border border-cyan-200
+ px-5 py-2 rounded-full text-sm font-semibold
+ cursor-default
+ hover:bg-cyan-500 hover:text-white
+ transition-all duration-300">
+                    Cursor Editor
+                </span>
+
+                <!-- เพิ่ม badge อื่นๆ ตามทักษะของตนเอง -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">Projects</h2>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600 "><img src="image/1g.png"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Profile Card</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/1g.png"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Profile Card</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/1g.png"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Profile Card</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">MY favorite Game</h2>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/1g.png"
+                            alt="Profile Card" class="w-full h-44 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Deadlock</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/3g.jpg"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Arknights endfield</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/2g.png"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Undertale</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 mb-2">My Favorite Song</h2>
+                <div class="w-12 h-1 bg-cyan-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/song1.png"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Triangle Game</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/song2.jpg"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Running In The Dark</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+                <!-- Project Card -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md
+ hover:shadow-xl hover:-translate-y-2
+ transition-all duration-300 group">
+                    <!-- Gradient header (แทน image) -->
+                    <div class="h-44 bg-gradient-to-br from-cyan-400 to-blue-600"><img src="image/song3.png"
+                            alt="Profile Card" class="w-full h-44 object-cover"></div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Hope Is The Thing With Feathers</h3>
+                        <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                            คําอธิบายโปรเจกต์สั้นๆ
+                        </p>
+                        <!-- Tech badges -->
+                        iv class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-blue-100 text-blue-700 px-2 py-0.5
+ rounded text-xs font-semibold">HTML</span>
+                        <span class="bg-cyan-100 text-cyan-700 px-2 py-0.5
+ rounded text-xs font-semibold">Tailwind</span>
+                    </div>
+                    <!-- View button -->
+                    <a href="#" class="block text-center bg-cyan-500 text-slate-900
+ py-2 rounded-lg font-semibold
+ hover:bg-cyan-600 transition">
+                        View Project
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- ── Projects ── -->
+    <section class="section section--alt" id="projects">
+        <div class="container">
+            <h2 class="section__title">Projects</h2>
+            <div class="projects__grid">
+                <div class="project-card">
+                    <div class="project-card__img project-card__img--1"></div>
+                    <div class="project-card__body">
+                        <h3>Profile Card</h3>
+                        <p>Profile card สร้างด้วย HTML + CSS Flexbox</p>
+                        <div class="projectcard__tags"><span>HTML</span><span>CSS</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__img project-card__img--2"></div>
+                    <div class="project-card__body">
+                        <h3>Personal Website</h3>
+                        <p>เว็บส่วนตัว Single Page พร้อม CSS Animation</p>
+                        <div class="projectcard__tags"><span>HTML</span><span>CSS</span><span>Flexbox</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__img project-card__img--3"></div>
+                    <div class="project-card__body">
+                        <h3>โปรเจกต์ของคุณ</h3>
+                        <p>อธิบายโปรเจกต์สั่นๆ ที่ทํามาก่อนหน้า</p>
+                        <div class="project-card__tags"><span>Your Tech</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ── MY favorite Game ── -->
+    <section class="section section--alt" id="myfavoritegame">
+        <div class="container">
+            <h2 class="section__title">My Favorite Game</h2>
+            <div class="projects__grid">
+                <div class="project-card">
+                    <div class="project-card__img-game project-card__game--1"></div>
+                    <div class="project-card__body">
+                        <h3>Deadlock</h3>
+                        <p> เป็นเกมแนว Third-Person Shooter (TPS) ผสม MOBA</p>
+
+
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__img-game project-card__game--2"></div>
+                    <div class="project-card__body">
+                        <h3>Arknights endfield</h3>
+                        <p> เป็นเกมแนว Action RPG ผสมการบริหารจัดการฐานและสร้างโรงงาน (Real-Time Strategy & Base
+                            Management)</p>
+
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card__img-game project-card__game--3"></div>
+                    <div class="project-card__body">
+                        <h3>โปรเจกต์ของคุณ</h3>
+                        <p> เป็นเกมแนว RPG (สวมบทบาท) แบบอินดี้</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Fovorite Song ── -->
+
+    <section class="section section--alt" id="fovoritesong">
+        <div class="container">
+            <h2 class="section__title">My Favorite Song</h2>
+            <div class="projects__grid">
+
+                <div class="project-card">
+                    <div class="project-card__img-song project-card__song--1"></div>
+                    <div class="project-card__body">
+                        <h3>Triangle Game</h3>
+
+                        <div class="projectcard__tags"><span class="badge badge--pink">YUIKA</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__img-song project-card__song--2"></div>
+                    <div class="project-card__body">
+                        <h3>Running In The Dark</h3>
+
+                        <div class="projectcard__tags"> <span class="badge badge--pink">MONKEY MAJIK</span> </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-card__img-song project-card__song--3"></div>
+                    <div class="project-card__body">
+                        <h3>Hope Is The Thing With Feathers</h3>
+
+                        <div class="projectcard__tags"> <span class="badge badge--pink">ROBIN</span> </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- ── Contact ── -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section__title">Contact Me</h2>
+            <div class="contact__layout">
+                <div class="contact__info">
+
+                    <p style="display: flex;"><img class="icon" src="icon/2c.png" alt="icon"
+                            style="margin-right: 10px;"><a href="mailto:ninjakapog@gmail.com">ninjakapog@gmail.com</a>
+                    </p>
+
+                    <p style="display: flex;"><img class="icon" src="icon/1c.png" alt="icon"
+                            style="margin-right: 10px;"><a href="https://github.com/kuroyukiina-del"
+                            target="_blank">github.com/kuroyukiina-del</a></p>
+
+                    <p style="display: flex;"><img class="icon" src="icon/4c.png" alt="icon"
+                            style="margin-right: 10px;"><a
+                            href="https://www.facebook.com/suphkr.yang.smburn?locale=th_TH" target="_blank">ศุภกร
+                            ยางสมบูรณ์</a></p>
+
+                    <p style="display: flex;"><img class="icon" src="icon/5c.png" alt="icon"
+                            style="margin-right: 10px;"><a href="https://www.youtube.com/@yukiina-q5m"
+                            target="_blank">@yukiina-q5m</a></p>
+
+                    <p style="display: flex;"><img class="icon" src="icon/6c.png" alt="icon"
+                            style="margin-right: 10px;"><a href="https://x.com/kuro_yukiina"
+                            target="_blank">@kuro_yukiina</a></p>
+
+                    <p style="display: flex;"><img class="icon" src="icon/7c.png" alt="icon"
+                            style="margin-right: 10px;"><a href="https://store.line.me/stickershop/author/5578550/th"
+                            target="_blank">Buy MyStickerLine</a></p>
+
+                    <p style="display: flex;"><img class="icon" src="icon/3c.png" alt="icon"
+                            style="margin-right: 10px;"> มหาวิทยาลัยทักษิณ, วิทยาเขตพัทลุง</p>
+                </div>
+                <form class="contact__form">
+                    <input type="text" placeholder="ชื่อของคุณ" class="form-input">
+                    <input type="email" placeholder="อีเมล" class="form-input">
+                    <textarea placeholder="ข้อความ" rows="4" class="form-input"></textarea>
+                    <button type="submit" class="btn btn--primary">ส่งข้อความ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- ── Footer ── -->
+    <footer class="footer">
+        <p>&copy; 2569 Supakorn Yangsomboon | Built with HTML & CSS</p>
+    </footer>
+</body>
+
+</html>
